@@ -71,7 +71,7 @@ public class WebhookService {
 
     private void submitAnswer(String webhookUrl, String accessToken, String finalQuery) {
         HttpHeaders headers = new HttpHeaders();
-        headers.set("Authorization", "Bearer " + accessToken);
+        headers.set("Authorization", accessToken);
         headers.setContentType(MediaType.APPLICATION_JSON);
 
         Map<String, String> body = new HashMap<>();
